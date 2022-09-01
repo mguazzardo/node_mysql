@@ -11,10 +11,10 @@ app.use(bodyParser.json());
 
 // MySql
 const connection = mysql.createConnection({
-  host: 'localhost',
-  user: 'root',
-  password: 'rootpass',
-  database: 'node20_mysql'
+  host: 'localhost' || process.env.DB_HOST ,
+  user: 'root' || process.env.DB_USER,
+  password: 'rootpass' || process.env.PASS ,
+  database: 'node20_mysql || process.env.DB_NAME'
 });
 
 // Route
